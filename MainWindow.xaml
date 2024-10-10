@@ -1,0 +1,21 @@
+﻿<Window x:Class="PD_311_AsyncAwait.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PD_311_AsyncAwait"
+        mc:Ignorable="d"
+        Title="File Copier" Height="450" Width="800">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Click="SelectFile_Click">From</Button>
+            <Button Click="SelectFolder_Click">To</Button>
+            <Label Content="Copies: "/>
+            <TextBox x:Name="txtCopies" Width="50" />
+            <Button Click="CopyFiles_Click">Copy</Button>
+            <Button Click="StopCopy_Click">Stop</Button>
+        </ToolBar>
+        <ProgressBar x:Name="progressBar" DockPanel.Dock="Bottom" Height="20"></ProgressBar>
+        <ListBox x:Name="list"></ListBox>
+    </DockPanel>
+</Window>
